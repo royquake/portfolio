@@ -1,0 +1,238 @@
+/* ==================== General Styles ==================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ==================== Navigation Menu ==================== */
+nav {
+    background-color: #007bff;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ffe600;
+}
+
+/* ==================== Hero / Home Section ==================== */
+#home {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+}
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+#home h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+#home p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+#home button {
+    background-color: #ffe600;
+    color: #333;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#home button:hover {
+    background-color: #fff;
+}
+
+/* ==================== Section Styling ==================== */
+section {
+    padding: 2.5rem 1rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #007bff;
+}
+
+/* ==================== Skills Section ==================== */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+#skills li {
+    margin: 0.8rem 0;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#skills li::before {
+    content: "•";
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+/* ==================== Education & Certifications ==================== */
+#education p,
+#certifications ul {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+#certifications ul {
+    list-style-type: "✔ ";
+    padding-left: 1.2rem;
+}
+#certifications li {
+    margin: 0.5rem 0;
+}
+
+/* ==================== Portfolio ==================== */
+#portfolio {
+    text-align: center;
+}
+.portfolio-item {
+    margin: 2rem 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.portfolio-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+}
+.portfolio-item img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.portfolio-item h3 {
+    margin-top: 1rem;
+    color: #007bff;
+}
+.portfolio-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==================== Form Styling ==================== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 500;
+}
+form input, form textarea {
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+form button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* ==================== Footer ==================== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #007bff;
+    color: white;
+    margin-top: 2rem;
+}
+footer .social-links {
+    margin-top: 0.8rem;
+}
+footer .social-links a {
+    color: white;
+    font-size: 1.4rem;
+    margin: 0 0.6rem;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+footer .social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* ======= Social Icon Colors (Hover Effects) ======= */
+footer .fa-facebook:hover { color: #1877f2; }
+footer .fa-whatsapp:hover { color: #25d366; }
+footer .fa-tiktok:hover { color: #010101; }
+footer .fa-instagram:hover { color: #e4405f; }
+footer .fa-telegram:hover { color: #0088cc; }
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    #home h1 {
+        font-size: 1.8rem;
+    }
+    section {
+        padding: 1.5rem;
+    }
+    .portfolio-item img {
+        max-width: 100%;
+    }
+}
